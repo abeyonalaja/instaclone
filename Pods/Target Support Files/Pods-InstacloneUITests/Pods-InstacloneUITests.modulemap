@@ -1,0 +1,6 @@
+framework module Pods_InstacloneUITests {
+  umbrella header "Pods-InstacloneUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
