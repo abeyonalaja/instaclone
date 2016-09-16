@@ -10,6 +10,23 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet var avaImg: UIImageView!
+    @IBOutlet var usernameTxt: UITextField!
+    @IBOutlet var passwordTxt: UITextField!
+    @IBOutlet var confirmPasswordTxt: UITextField!
+    @IBOutlet var fullNameTxt: UITextField!
+    @IBOutlet var bioTxt: UITextField!
+    @IBOutlet var webTxt: UITextField!
+    
+    @IBOutlet weak var signUpBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    
+    @IBOutlet var scrollView: UIScrollView!
+    var scrollViewHeight : CGFloat = 0
+    
+    var keyboard = CGRect();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +38,12 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signUpBtnClick(_ sender: AnyObject) {
+    }
 
+    @IBAction func cancaleBtnClick(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

@@ -10,6 +10,13 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet var usernameTxt: UITextField!
+    @IBOutlet var passwordTxt: UITextField!
+    @IBOutlet var signupBtn: UIButton!
+    @IBOutlet var signUpBtn: UIButton!
+    @IBOutlet var forgotPasswordBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +28,8 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signInBtnClick(_ sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation
