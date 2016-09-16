@@ -31,8 +31,23 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+        scrollView.bounds = CGRect(x: 0, y: 0, width: Int(self.view.frame.width), height: Int(self.view.frame.height))
+        
+        scrollView.contentSize.height = scrollView.frame.size.height
+        scrollViewHeight = scrollView.frame.size.height
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
 
+        let hideTap = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.hideKeyboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
+    }
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,6 +59,19 @@ class SignUpViewController: UIViewController {
     @IBAction func cancaleBtnClick(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func hideKeyboardTap() {
+        self.view.endEditing(true)
+    }
+    
+    func showKeyboard() {
+        print("Fuck that guy")
+    }
+
+    func hideKeyboard() {
+        print("Fuck that guy")
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -53,5 +81,22 @@ class SignUpViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func keyboardWillShow(_ notification: NSNotification) {
+        print("Will Sjhow")
+        keyboard = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey]  as! NSValue).cgRectValue
+        
+        UIView.animate(withDuration: 0.4) { 
+            self.scrollView.frame.size.height = self.scrollViewHeight - self.keyboard.height
+        }
+    }
+    
+    func keyboardWillHide(_ notification: NSNotification) {
+        print("Hide KEYBOARD")
+        
+        UIView.animate(withDuration: 0.4) {
+            self.scrollView.frame.size.height = self.view.frame.height
+        }
+    }
+    
 }
