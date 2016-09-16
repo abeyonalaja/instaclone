@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		047CD40C7DE0A138BFE4F387 /* Pods_InstacloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0328F888AB281C16DA96261F /* Pods_InstacloneTests.framework */; };
 		22193C69C216B9897EE9FD77 /* Pods_Instaclone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4B7EAFD9735B1284A50F4F /* Pods_Instaclone.framework */; };
+		4BDFC1261D8B6C98006FE3E1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFC1251D8B6C98006FE3E1 /* SignInViewController.swift */; };
+		4BDFC1281D8B6CAF006FE3E1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFC1271D8B6CAF006FE3E1 /* SignUpViewController.swift */; };
+		4BDFC12A1D8B6CC2006FE3E1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFC1291D8B6CC2006FE3E1 /* ResetPasswordViewController.swift */; };
 		4BFDDD451D839676003FC66A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFDDD441D839676003FC66A /* AppDelegate.swift */; };
-		4BFDDD471D839676003FC66A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFDDD461D839676003FC66A /* ViewController.swift */; };
 		4BFDDD4A1D839676003FC66A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFDDD481D839676003FC66A /* Main.storyboard */; };
 		4BFDDD4D1D839676003FC66A /* Instaclone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BFDDD4B1D839676003FC66A /* Instaclone.xcdatamodeld */; };
 		4BFDDD4F1D839676003FC66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFDDD4E1D839676003FC66A /* Assets.xcassets */; };
@@ -51,9 +53,11 @@
 		0266DA4AAB62DBB1BD85468F /* Pods-Instaclone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instaclone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instaclone/Pods-Instaclone.debug.xcconfig"; sourceTree = "<group>"; };
 		0328F888AB281C16DA96261F /* Pods_InstacloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstacloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4B7EAFD9735B1284A50F4F /* Pods_Instaclone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instaclone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDFC1251D8B6C98006FE3E1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4BDFC1271D8B6CAF006FE3E1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4BDFC1291D8B6CC2006FE3E1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		4BFDDD411D839676003FC66A /* Instaclone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaclone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFDDD441D839676003FC66A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BFDDD461D839676003FC66A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BFDDD491D839676003FC66A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BFDDD4C1D839676003FC66A /* Instaclone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Instaclone.xcdatamodel; sourceTree = "<group>"; };
 		4BFDDD4E1D839676003FC66A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,12 +174,14 @@
 			isa = PBXGroup;
 			children = (
 				4BFDDD441D839676003FC66A /* AppDelegate.swift */,
-				4BFDDD461D839676003FC66A /* ViewController.swift */,
 				4BFDDD481D839676003FC66A /* Main.storyboard */,
 				4BFDDD4E1D839676003FC66A /* Assets.xcassets */,
 				4BFDDD501D839676003FC66A /* LaunchScreen.storyboard */,
 				4BFDDD531D839676003FC66A /* Info.plist */,
 				4BFDDD4B1D839676003FC66A /* Instaclone.xcdatamodeld */,
+				4BDFC1251D8B6C98006FE3E1 /* SignInViewController.swift */,
+				4BDFC1271D8B6CAF006FE3E1 /* SignUpViewController.swift */,
+				4BDFC1291D8B6CC2006FE3E1 /* ResetPasswordViewController.swift */,
 			);
 			path = Instaclone;
 			sourceTree = "<group>";
@@ -284,13 +290,17 @@
 				TargetAttributes = {
 					4BFDDD401D839676003FC66A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMK8N2P8HN;
+						LastSwiftMigration = 0800;
 					};
 					4BFDDD571D839676003FC66A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4BFDDD401D839676003FC66A;
 					};
 					4BFDDD621D839676003FC66A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4BFDDD401D839676003FC66A;
 					};
 				};
@@ -471,8 +481,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BFDDD4D1D839676003FC66A /* Instaclone.xcdatamodeld in Sources */,
-				4BFDDD471D839676003FC66A /* ViewController.swift in Sources */,
 				4BFDDD451D839676003FC66A /* AppDelegate.swift in Sources */,
+				4BDFC12A1D8B6CC2006FE3E1 /* ResetPasswordViewController.swift in Sources */,
+				4BDFC1281D8B6CAF006FE3E1 /* SignUpViewController.swift in Sources */,
+				4BDFC1261D8B6C98006FE3E1 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,10 +627,12 @@
 			baseConfigurationReference = 0266DA4AAB62DBB1BD85468F /* Pods-Instaclone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMK8N2P8HN;
 				INFOPLIST_FILE = Instaclone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.Instaclone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -627,10 +641,12 @@
 			baseConfigurationReference = D578881D62F70D5D65AF922A /* Pods-Instaclone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMK8N2P8HN;
 				INFOPLIST_FILE = Instaclone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.Instaclone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -643,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.InstacloneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instaclone.app/Instaclone";
 			};
 			name = Debug;
@@ -656,6 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.InstacloneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instaclone.app/Instaclone";
 			};
 			name = Release;
@@ -668,6 +686,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.InstacloneUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Instaclone;
 			};
 			name = Debug;
@@ -680,6 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.uk.glow.InstacloneUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Instaclone;
 			};
 			name = Release;
